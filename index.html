@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atrium</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="assets\favicon.ico" type="image/"> <!-- Favicon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="assets\logo.png" alt="Logo">
+                </a>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="shop.html" target="_blank">Shop</a></li>
+                <li><a href="#montages">Montage's</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="https://docs.google.com/document/d/1-MtRZkOmIFEZl2k7fUSckmhnabh1SKALN2D6_Jac9Nk/edit" target="_blank">Atrium Roster</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    </header>
+
+    <main>
+        <section class="video-background">
+            <video autoplay muted loop id="bg-video">
+                <source src="assets\hero.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay">
+                <h1>We Are Atrium</h1>
+                <p>The Return. EST 2015</p>
+            </div>
+        </section>
+   <!-- about          -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Welcome to Atrium, a vibrant and dynamic community where creativity meets gaming. We're a collective of passionate designers, developers, and gamers dedicated to pushing the boundaries of both art and interactive entertainment. Our mission is to bring together individuals who share a love for innovative design and immersive gaming experiences.</p>
+                        <p>At Atrium, we envision a space where design enthusiasts and gamers can collaborate, learn, and grow together. We believe that the intersection of design and gaming holds immense potential for creativity and innovation. Whether you're an aspiring designer, an experienced developer, or a dedicated gamer, our community provides a platform to explore new ideas, showcase your work, and connect with like-minded individuals.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets\about.jpg" alt="About Us">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+                    <!-- montages           -->
+    <section id="montages" class="montages-section">
+        <div class="container">
+            <h2>Montages</h2>
+            <div class="video-gallery">
+                <div class="video-item">
+                    <video controls>
+                        <source src="assets/1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="assets/2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video controls>
+                        <source src="assets/3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- Tambahkan video-item lain di sini -->
+            </div>
+        </div>
+    </section>
+   <!-- team         -->
+   <section id="team" class="team-section">
+    <div class="container">
+        <h2>Our Team</h2>
+        <div class="team-gallery">
+            <div class="team-member">
+                <a href="https://x.com/AtriumVisuals" target="_blank">
+                <img src="assets/member1.jpg" alt="Team Member 1">
+                <h3>AtriumVisuals</h3>
+                <p></p>
+            </div>
+            <div class="team-member">
+                <a href="https://x.com/AtriumKings" target="_blank">
+                <img src="assets/member2.jpg" alt="Team Member 2">
+                <h3>AtriumKings</h3>
+                <p></p>
+            </div>
+</section>
+    
+        <!-- Sponsored By Section -->
+        <div class="sponsored-by">
+            <h3>Sponsored By</h3>
+            <a href="https://x.com/DubbyEnergy" target="_blank">
+                <img src="assets/dubby_logo_v2-01_180x.png" alt="Sponsor Name" class="sponsor-logo">
+            </a>
+        </div>
+    </div>
+</section>
+<section id="contact" class="contact-section">
+    <div class="background-image"></div>
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Please reach out with any questions or comments.</p>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section> </section>
+<footer class="footer-navbar">
+    <div class="footer-content">
+        <p>&copy; 2024 Atrium. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://discord.com/invite/fnH5z3eRQW" target="_blank" class="social-icon" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            <a href="https://www.youtube.com/@atriumsniping" target="_blank" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/AtriumVisuals" target="_blank" class="social-icon" aria-label="X Account 1"><i class="fab fa-twitter"></i></a>
+            <a href="https://x.com/AtriumKings" target="_blank" class="social-icon" aria-label="X Account 2"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+    <script>
+    
+        
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Optional: If you want to control video sound programmatically
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('bg-video');
+            video.volume = 0.5; // Adjust volume (0.0 to 1.0)
+        });
+    </script>
+</body>
+</html>

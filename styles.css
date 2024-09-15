@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000; /* Latar belakang hitam */
+    color: #f80000; /* Warna teks putih agar kontras dengan latar belakang hitam */
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #000; /* Background black, non-transparent */
+    color: #fff;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+    width: auto;
+}
+
+
+
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background: #333; /* Darker background on hover for better visibility */
+    border-radius: 5px;
+}
+
+/* Video Background Styling */
+
+.video-background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 1.5em;
+}
+
+/* About Section Styling */
+.about-section {
+    padding: 50px 0;
+    background: #f4f4f4; /* Light grey background for contrast */
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.montages-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.video-item {
+    flex: 1 1 calc(33.333% - 30px); /* Untuk 3 video per baris dengan gap */
+    box-sizing: border-box;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+/*team */
+.team-section {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.team-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member {
+    flex: 1 1 calc(33.333% - 40px); /* 3 anggota tim per baris dengan jarak */
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Efek hover */
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.sponsored-by {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sponsored-by h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.sponsor-logo {
+    max-width: 200px;
+    height: auto;
+}
+.contact-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path/to/your/image.png'); /* Ganti dengan path gambar Anda */
+    background-size: cover; /* Menyesuaikan ukuran gambar */
+    background-position: center; /* Menyelaraskan gambar di tengah */
+    z-index: -1; /* Menempatkan gambar di belakang konten */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Sedikit transparansi untuk latar belakang konten */
+    border-radius: 8px;
+}
+
+h2 {
+    margin: 0 0 20px;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 0 0 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    text-align: left;
+    font-size: 1em;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling untuk footer navbar */
+.footer-navbar {
+    position: fixed; /* Tetap di bawah */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Lebar penuh */
+    background: #000; /* Latar belakang hitam */
+    color: #fff; /* Teks putih */
+    text-align: center; /* Pusatkan teks */
+    padding: 10px 0; /* Ruang di sekitar */
+    z-index: 1000; /* Pastikan di atas konten lain */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5); /* Bayangan halus */
+}
+
+.footer-content {
+    margin: 0; /* Hapus margin default */
+}
+
+.footer-content p {
+    margin: 0; /* Hapus margin default */
+    font-size: 0.9em; /* Ukuran font */
+    line-height: 1.5; /* Jarak antara baris */
+}
+
+.social-media {
+    margin-top: 10px; /* Jarak antara teks dan ikon sosial */
+}
+
+.social-icon {
+    color: #fff; /* Warna ikon putih */
+    font-size: 1.5em; /* Ukuran ikon */
+    margin: 0 15px; /* Jarak antara ikon */
+    text-decoration: none; /* Hapus garis bawah */
+}
+
+.social-icon:hover {
+    color: #007bff; /* Warna saat hover */
+}
+
+/* Responsive styling */
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute; /* Mengatur posisi tetap pada layar */
+        top: 60px; /* Jarak dari atas */
+        right: 0;
+        background: #000; /* Background hitam untuk menu dropdown */
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 60px); /* Memastikan menu menutupi sisa layar */
+        overflow-y: auto; /* Menambahkan scroll pada menu jika diperlukan */
+        transition: transform 0.3s ease; /* Transisi untuk efek masuk */
+        transform: translateY(-100%); /* Memulai dari posisi di luar layar */
+    }
+    
+    .nav-links.active {
+        display: flex;
+        transform: translateY(0); /* Menampilkan menu saat aktif */
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+        color: #fff; /* Warna teks putih */
+        padding: 10px 15px; /* Padding untuk item menu */
+    }
+}
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Ubah arah tata letak menjadi kolom pada ponsel */
+        align-items: center; /* Tengah-kan elemen */
+    }
+
+    .about-text {
+        padding-right: 0; /* Hapus padding pada mode ponsel */
+        margin-bottom: 20px; /* Jarak antara teks dan gambar */
+    }
+
+    .about-image img {
+        width: 100%; /* Memastikan gambar responsif */
+    }
+}
+@media (max-width: 768px) {
+    .video-item {
+        flex: 1 1 calc(50% - 30px); /* Untuk 2 video per baris pada layar lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-item {
+        flex: 1 1 100%; /* Untuk 1 video per baris pada layar sangat kecil */
+    }
+}
+@media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 calc(50% - 20px); /* 2 anggota tim per baris pada layar lebih kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        flex: 1 1 100%; /* 1 anggota tim per baris pada layar sangat kecil */
+    }
+}
+
+
+

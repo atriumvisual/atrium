@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrium Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"> <!-- Favicon -->
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="My Shop Logo" class="logo"> <!-- Logo PNG -->
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section>
+            <h2>T-shirt Products</h2>
+            <div class="product" data-price="38.50">
+                <div class="gallery">
+                    <img src="assets/1.gif" alt="Product 1 Image 1" class="gallery-image" onclick="openModal(this.src)">
+                </div>
+                <h3>Atrium Visual</h3>
+                <p>€38.50</p>
+                <div class="size-selection">
+                    <label>
+                        <input type="radio" name="size-product-1" value="S"> S
+                    </label>
+                    <label>
+                        <input type="radio" name="size-product-1" value="M"> M
+                    </label>
+                    <label>
+                        <input type="radio" name="size-product-1" value="L"> L
+                    </label>
+                    <label>
+                        <input type="radio" name="size-product-1" value="XL"> XL
+                    </label>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-price="44.95">
+                <div class="gallery">
+                    <img src="assets/2.gif"Product 2 Image 1" class="gallery-image" onclick="openModal(this.src)">
+                </div>
+                <h3>Atrium Samurai</h3>
+                <p>€44.95</p>
+                <div class="size-selection">
+                    <label>
+                        <input type="radio" name="size-product-2" value="S"> S
+                    </label>
+                    <label>
+                        <input type="radio" name="size-product-2" value="M"> M
+                    </label>
+                    <label>
+                        <input type="radio" name="size-product-2" value="L"> L
+                    </label>
+                    <label>
+                        <input type="radio" name="size-product-2" value="XL"> XL
+                    </label>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-price="38.50">
+                <div class="gallery">
+                    <img src="assets/3.gif" alt="Product 3 Image 1" class="gallery-image" onclick="openModal(this.src)">
+                </div>
+                <h3>Atrium Robotic</h3>
+                <p>€38.50</p>
+                <div class="size-selection">
+                    <label>
+                        <input type="radio" name="size-product-3" value="S"> S
+                    </label>
+                    <label>
+                        <input type="radio" name="size-product-3" value="M"> M
+                    </label>
+                    <label>
+                        <input type="radio" name="size-product-3" value="L"> L
+                    </label>
+                    <label>
+                        <input type="radio" name="size-product-3" value="XL"> XL
+                    </label>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="cart">
+            <div class="cart-icon">
+                <img src="assets/cartt.png" alt="Cart Icon">
+                <span id="total-price">0.00</span>
+            </div>
+            <ul id="cart-items"></ul>
+            <button id="checkout-button">Checkout</button> <!-- Checkout Button -->
+        </section>
+    </main>
+
+    <!-- Modal for image preview -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+   <!-- Checkout Form -->
+<div id="checkout-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCheckoutModal()">&times;</span>
+        <h2>Checkout</h2>
+        <form id="checkout-form" action="https://formspree.io/f/xovarwll" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+            <div class="form-group">
+                <label for="postcode">Postcode:</label>
+                <input type="text" id="postcode" name="postcode" required>
+            </div>
+            <h3>Order Summary</h3>
+            <ul id="order-items"></ul>
+            <p>Total Price: €<span id="checkout-total-price">0.00</span></p>
+            <!-- PayPal Button Container -->
+            <div id="paypal-button-container"></div>
+            <!-- PayPal Result Message -->
+            <p id="result-message"></p>
+            <!-- Cancel Button -->
+            <button type="button" id="cancel-checkout" onclick="closeCheckoutModal()">Cancel</button>
+        </form>
+    </div>
+</div>
+
+    <footer id="contact">
+        <p>&copy; 2024 Atrium. All rights reserved.</p>
+    </footer>
+
+    <!-- PayPal JS SDK -->
+    <script
+    src="https://www.paypal.com/sdk/js?client-id=AU79hdctqeHVnKUQnB9I9S4HkKJy2r4ug1pNPZtwM1cvoF8d67xgUQXt3x8XIwmQUEkwmK1ypXgsSLh1"
+    data-sdk-integration-source="developer-studio"
+    ></script>
+
+    <!-- Custom JavaScript -->
+    <script src="shop.js" defer></script>
+    <!-- PayPal Integration Script -->
+    <script src="app.js" defer></script>
+</body>
+</html>
